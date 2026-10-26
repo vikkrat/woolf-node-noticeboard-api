@@ -1,0 +1,34 @@
+[
+  {
+    "request": "POST /auth/register",
+    "status": 201,
+    "response": {
+      "user": {
+        "id": 3,
+        "username": "demo_a035e74c",
+        "email": "demo_a035e74c@example.com",
+        "name": "Demo Publisher"
+      },
+      "accessToken": "[redacted]",
+      "refreshToken": "[redacted]"
+    }
+  },
+  {
+    "request": "GET /auth/me",
+    "status": 200,
+    "response": {
+      "id": 3,
+      "username": "demo_a035e74c",
+      "email": "demo_a035e74c@example.com",
+      "name": "Demo Publisher",
+      "createdAt": "2026-10-26T15:38:32.269Z"
+    }
+  },
+  {
+    "request": "GET /auth/me",
+    "status": 401,
+    "response": {
+      "error": "Authentication required"
+    }
+  }
+]

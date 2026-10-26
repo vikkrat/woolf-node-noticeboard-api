@@ -1,0 +1,50 @@
+[
+  {
+    "request": "POST /announcements",
+    "status": 201,
+    "response": {
+      "id": 15,
+      "title": "City bicycle for sale",
+      "description": "Well maintained bicycle with lights and a basket.",
+      "price": 180,
+      "category": "sale",
+      "createdAt": "2026-10-26T15:38:32.479Z",
+      "updatedAt": "2026-10-26T15:38:32.479Z",
+      "user": {
+        "id": 3,
+        "username": "demo_a035e74c",
+        "email": "demo_a035e74c@example.com",
+        "name": "Demo Publisher"
+      }
+    }
+  },
+  {
+    "request": "GET /announcements?search=BICYCLE&sort=newest&page=1",
+    "status": 200,
+    "response": {
+      "data": [
+        {
+          "id": 15,
+          "title": "City bicycle for sale",
+          "description": "Well maintained bicycle with lights and a basket.",
+          "price": 180,
+          "category": "sale",
+          "createdAt": "2026-10-26T15:38:32.479Z",
+          "updatedAt": "2026-10-26T15:38:32.479Z",
+          "user": {
+            "id": 3,
+            "username": "demo_a035e74c",
+            "email": "demo_a035e74c@example.com",
+            "name": "Demo Publisher"
+          }
+        }
+      ],
+      "pagination": {
+        "total": 1,
+        "page": 1,
+        "totalPages": 1,
+        "perPage": 10
+      }
+    }
+  }
+]
